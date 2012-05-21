@@ -1,4 +1,4 @@
-require 'spree_core'
+require 'spree/core'
 
 module Spree
   module Sitemap
