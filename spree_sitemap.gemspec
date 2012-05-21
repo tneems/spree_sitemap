@@ -1,12 +1,12 @@
 $:.push File.expand_path("../lib", __FILE__)
 
 # Maintain your gem's version:
-require "spree_sitemap/version"
+require "spree/sitemap/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = "spree_sitemap"
-  s.version     = SpreeSitemap::VERSION
+  s.version     = Spree::Sitemap::VERSION
   s.authors     = ["Tim Neems"]
   s.email       = ["tneems@gmail.com"]
   # s.homepage    = "TODO"

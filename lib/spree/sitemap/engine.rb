@@ -1,5 +1,5 @@
 module Spree
-  module Sitemp
+  module Sitemap
     class Engine < Rails::Engine
       isolate_namespace Spree
 
