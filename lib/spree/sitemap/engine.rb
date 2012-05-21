@@ -2,6 +2,7 @@ module Spree
   module Sitemap
     class Engine < Rails::Engine
       isolate_namespace Spree
+      engine_name 'spree_sitemap'
 
       initializer "spree.sitemap.environment", :before => :load_config_initializers do |app|
         Spree::Sitemap::Config = Spree::SitemapConfiguration.new
