@@ -22,7 +22,6 @@ RSpec::Core::RakeTask.new
 # APP_RAKEFILE = File.expand_path("../spec/dummy/Rakefile", __FILE__)
 # load 'rails/tasks/engine.rake'
 
-
 task :default => :spec
 
 desc "Generates a dummy app for testing"
