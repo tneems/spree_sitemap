@@ -1,0 +1,6 @@
+en:
+  sitemap: Sitemap
+  sitemap_description: Sitemap Configuration
+  sitemap_include_product_groups: Include Product Groups
+  sitemap_include_product_taxonomies: Include Product Taxonomies
+  sitemap_static_pages: Extra Static Pages

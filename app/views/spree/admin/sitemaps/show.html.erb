@@ -1,0 +1,20 @@
+<%= render :partial => 'spree/admin/shared/configuration_menu' %>
+
+<h1><%= t("sitemap_settings") %></h1>
+
+<table>
+  <tr>
+    <th scope="row"><%= t("sitemap_include_product_groups") %>:</th>
+    <td><%= Spree::Sitemap::Config[:include_product_groups] %></td>
+  </tr>
+  <tr>
+    <th scope="row"><%= t("sitemap_include_product_taxonomies") %>:</th>
+    <td><%= Spree::Sitemap::Config[:include_product_taxonomies] %></td>
+  </tr>
+  <tr>
+    <th scope="row"><%= t("sitemap_static_pages") %>:</th>
+    <td><%= Spree::Sitemap::Config[:static_pages] %></td>
+  </tr>
+</table>
+
+<p><%= link_to_with_icon 'edit', t("edit"), edit_admin_sitemap_path, :id => 'admin_sitemap_link' %></p>

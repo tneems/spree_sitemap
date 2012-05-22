@@ -1,0 +1,27 @@
+<%= render :partial => 'spree/admin/shared/configuration_menu' %>
+
+<h1><%= t("sitemap_settings") %></h1>
+
+<%= form_tag(admin_sitemap_path, :method => :put) do %>
+  <fieldset id="preferences" data-hook>
+    <p>
+      <label>
+        <%= preference_field_tag(:include_product_groups, Spree::Sitemap::Config[:include_product_groups], :type => :boolean) %>
+        <%= t("sitemap_include_product_groups") %>
+      </label>
+    </p>
+    <p>
+      <label>
+        <%= preference_field_tag(:include_product_taxonomies, Spree::Sitemap::Config[:include_product_taxonomies], :type => :boolean) %>
+        <%= t("sitemap_include_product_taxonomies") %>
+      </label>
+    </p>
+
+    <label><%= t("sitemap_static_pages") %></label>
+    <%= preference_field_tag(:static_pages, Spree::Sitemap::Config[:static_pages], :type => :string) %>
+  </fieldset>
+  <p class="form-buttons">
+    <%= button t('update') %>
+    <%= t("or") %> <%= link_to t("cancel"), admin_sitemap_url %>
+  </p>
+<% end %>

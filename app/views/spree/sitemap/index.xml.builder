@@ -37,4 +37,14 @@ xml.urlset :xmlns => "http://www.sitemaps.org/schemas/sitemap/0.9" do
       end
     end
   end
+  if Spree::Sitemap::Config[:static_pages].present?
+    Spree::Sitemap::Config[:static_pages].gsub(/\s/,'').split(',').each do |page|
+      xml.url do
+        xml.loc "#{base_url}/#{page}"
+        xml.lastmod Date.today.xmlschema
+        xml.changefreq 'weekly'
+        xml.priority '0.8'
+      end
+    end
+  end
 end
