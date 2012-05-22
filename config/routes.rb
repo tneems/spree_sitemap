@@ -1,3 +1,3 @@
 Spree::Core::Engine.routes.draw do
-  resource :sitemap, :only => [:index]
+  get '/sitemap' => 'sitemap#index'
 end
